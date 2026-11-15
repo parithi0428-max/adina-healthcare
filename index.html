@@ -1,0 +1,479 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Adina Healthcare | Medical Equipment Supplier</title>
+<meta name="description" content="Adina Healthcare – Medical equipment supplier in Kuala Lumpur, Malaysia.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --green: #123b30;
+  --dark: #0b241e;
+  --gold: #c5a66a;
+  --cream: #f7f5ef;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: #26342e;
+  background: var(--cream);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 23px 8%;
+  background: var(--white);
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: 700;
+  color: var(--green);
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: var(--gold);
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  font-size: 13px;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+.hero {
+  min-height: 660px;
+  display: flex;
+  align-items: center;
+  padding: 90px 10%;
+  color: white;
+
+  background:
+  linear-gradient(90deg, rgba(7,31,24,.96), rgba(7,31,24,.65)),
+  url('https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=1800&q=85')
+  center/cover;
+}
+
+.hero-content {
+  max-width: 720px;
+}
+
+.eyebrow {
+  color: var(--gold);
+  letter-spacing: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(43px, 6vw, 76px);
+  line-height: 1.12;
+  margin: 24px 0;
+}
+
+.hero p {
+  color: #e0e7e2;
+  font-size: 16px;
+  line-height: 1.9;
+  max-width: 570px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 16px 27px;
+  margin-top: 32px;
+  background: var(--gold);
+  color: #14271f;
+  font-weight: 700;
+  font-size: 13px;
+  border-radius: 3px;
+  transition: .3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  background: white;
+}
+
+section {
+  padding: 95px 10%;
+}
+
+.section-label {
+  color: #a4864f;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(34px, 4vw, 48px);
+  color: var(--green);
+  margin: 18px 0;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+  align-items: center;
+}
+
+.about p,
+.contact p {
+  line-height: 1.9;
+  color: #68746d;
+  font-size: 15px;
+}
+
+.about-image {
+  min-height: 380px;
+  border-radius: 4px;
+  background:
+  url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=85')
+  center/cover;
+}
+
+.services {
+  background: #edf0e9;
+  text-align: center;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 22px;
+  margin-top: 45px;
+  text-align: left;
+}
+
+.service-card {
+  background: white;
+  padding: 35px 28px;
+  border-bottom: 3px solid var(--gold);
+}
+
+.service-card .number {
+  color: var(--gold);
+  font-size: 13px;
+}
+
+.service-card h3 {
+  color: var(--green);
+  margin: 18px 0 12px;
+  font-family: 'Playfair Display', serif;
+  font-size: 23px;
+}
+
+.service-card p {
+  color: #758078;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.contact {
+  background: var(--dark);
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.contact h2 {
+  color: white;
+}
+
+.contact p {
+  color: #c4d0c8;
+  margin: 12px 0;
+}
+
+.contact-details {
+  margin-top: 28px;
+  line-height: 2.2;
+  font-size: 14px;
+}
+
+.contact-details strong {
+  color: var(--gold);
+}
+
+footer {
+  background: #071b15;
+  color: #9ca99f;
+  padding: 25px 10%;
+  text-align: center;
+  font-size: 12px;
+}
+
+.reveal {
+  animation: appear .9s ease both;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media(max-width:750px) {
+  nav {
+    padding: 20px 6%;
+  }
+
+  .nav-links {
+    gap: 12px;
+    font-size: 11px;
+  }
+
+  .hero {
+    min-height: 580px;
+    padding: 75px 7%;
+  }
+
+  section {
+    padding: 70px 7%;
+  }
+
+  .about,
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    min-height: 270px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="#" class="logo">ADINA<span>.</span></a>
+
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Our Focus</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="home">
+  <div class="hero-content reveal">
+
+    <div class="eyebrow">
+      Medical Equipment Supplier
+    </div>
+
+    <h1>
+      Supporting Better Healthcare.
+    </h1>
+
+    <p>
+      Welcome to Adina Healthcare. Your point of contact
+      for medical equipment and healthcare supply enquiries
+      in Kuala Lumpur. Discover a professional approach
+      built around healthcare needs.
+    </p>
+
+    <a href="#contact" class="btn">
+      GET IN TOUCH &nbsp; →
+    </a>
+
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+
+  <div class="about">
+
+    <div>
+      <div class="section-label">
+        Who We Are
+      </div>
+
+      <h2>Adina Healthcare</h2>
+
+      <p>
+        Adina Healthcare is a medical equipment supplier
+        based in Kuala Lumpur, Malaysia. We aim to make
+        healthcare equipment enquiries straightforward
+        and convenient through direct communication
+        with our team.
+      </p>
+
+      <a href="#contact" class="btn">
+        CONTACT OUR TEAM →
+      </a>
+    </div>
+
+    <div class="about-image"></div>
+
+  </div>
+
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+
+  <div class="section-label">
+    What We Do
+  </div>
+
+  <h2>Healthcare Supply, Made Simple.</h2>
+
+  <p>
+    Connect with us for your medical equipment enquiries.
+  </p>
+
+  <div class="service-grid">
+
+    <div class="service-card">
+      <span class="number">01 / ENQUIRIES</span>
+
+      <h3>Medical Equipment</h3>
+
+      <p>
+        Contact our team to enquire about medical
+        equipment and availability.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <span class="number">02 / ASSISTANCE</span>
+
+      <h3>Customer Support</h3>
+
+      <p>
+        Get in touch for assistance with your
+        healthcare supply enquiries.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <span class="number">03 / LOCATION</span>
+
+      <h3>Convenient Contact</h3>
+
+      <p>
+        Find our Kuala Lumpur location and connect
+        with our team directly.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+  <div>
+
+    <div class="section-label">
+      Let's Connect
+    </div>
+
+    <h2>Get In Touch.</h2>
+
+    <p>
+      Have a medical equipment enquiry?
+      Contact Adina Healthcare today.
+    </p>
+
+    <a
+      class="btn"
+      href="https://wa.me/60149829843"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      CHAT ON WHATSAPP →
+    </a>
+
+  </div>
+
+  <div class="contact-details">
+
+    <p>
+      <strong>PHONE</strong><br>
+      <a href="tel:+60149829843">
+        014-982 9843
+      </a>
+    </p>
+
+    <p>
+      <strong>ADDRESS</strong><br>
+      25, Jalan 13/23B, Taman Danau Kota,<br>
+      53300 Kuala Lumpur, Malaysia
+    </p>
+
+    <p>
+      <strong>LOCATION</strong><br>
+
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=Adina+Healthcare+25+Jalan+13%2F23B+Taman+Danau+Kota+Kuala+Lumpur"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Open Google Maps →
+      </a>
+    </p>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Adina Healthcare. All Rights Reserved.
+</footer>
+
+</body>
+</html>
